@@ -1,9 +1,9 @@
 {
-  "name": "wileys",
-  "version": "0.0.5",
+  "name": "jagproject",
+  "version": "0.0.7",
   "description": "WhatsApp Web API Library",
   "keywords": [
-    "wileys",
+    "jagoan",
     "whatsapp",
     "whatsapp-api",
     "whatsapp-web",
@@ -11,12 +11,13 @@
     "automation",
     "multi-device"
   ],
-  "homepage": "https://www.npmjs.com/package/wileys",
+  "homepage": "https://www.npmjs.com/package/jagoanproject",
   "repository": {
-    "url": "https://www.npmjs.com/package/wileys"
-  },
+  "type": "git",
+  "url": "https://github.com/ChandraGO/jagoans.git"
+},
   "license": "MIT",
-  "author": "wileys",
+  "author": "jagoan",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -35,8 +36,8 @@
     "gen:protobuf": "sh WAProto/GenerateStatics.sh",
     "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
     "lint:fix": "eslint src --fix --ext .js,.ts,.jsx,.tsx",
-    "prepack": "echo 'Wileys WhatsApp Library'",
-    "prepare": "echo 'Wileys WhatsApp Library'",
+    "prepack": "echo 'jagoan WhatsApp Library'",
+    "prepare": "echo 'jagoan WhatsApp Library'",
     "preinstall": "node ./engine-requirements.js",
     "release": "release-it",
     "test": "jest"
