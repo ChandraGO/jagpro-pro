@@ -49,7 +49,6 @@ if %errorlevel% neq 0 (
 echo ==========================================================
 echo 🔼 Meningkatkan versi package...
 npm version patch
-
 if %errorlevel% neq 0 (
     echo ❌ Gagal menaikkan versi package. Periksa error di atas.
     pause
@@ -59,25 +58,26 @@ if %errorlevel% neq 0 (
 echo ==========================================================
 echo 🚀 Mengupload package ke NPM...
 echo ==========================================================
+npm publish --access public
+if %errorlevel% neq 0 (
+    echo ❌ Publish gagal. Periksa pesan error di atas.
+    pause
+    exit /b
+)
 
-:: Jalankan publish dengan PowerShell agar log tetap tampil
-powershell -NoExit -Command ^
-  "$ErrorActionPreference='SilentlyContinue'; ^
-   npm publish --access public; ^
-   if ($LASTEXITCODE -eq 0) { ^
-       Write-Host ''; ^
-       Write-Host '✅ Publish ke NPM berhasil!'; ^
-       Write-Host '==========================================================='; ^
-       Write-Host '🔁 Mengirim perubahan ke GitHub...'; ^
-       git push origin main; ^
-       Write-Host '🌐 Membuka halaman NPM...'; ^
-       Start-Process 'https://www.npmjs.com/package/jagproject'; ^
-       Write-Host '==========================================================='; ^
-       Write-Host '✅ Semua proses selesai! Tekan tombol apapun untuk keluar...'; ^
-       Pause ^
-   } else { ^
-       Write-Host '❌ Publish gagal. Periksa pesan error di atas.'; ^
-       Pause ^
-   }"
+echo ✅ Publish ke NPM berhasil!
+echo ==========================================================
+echo 🔁 Mengirim perubahan ke GitHub...
+git push origin main
+if %errorlevel% neq 0 (
+    echo ❌ Gagal push ke GitHub. Periksa pesan error di atas.
+    pause
+    exit /b
+)
 
+echo 🌐 Membuka halaman NPM...
+start https://www.npmjs.com/package/jagproject
+echo ==========================================================
+echo ✅ Semua proses selesai!
+pause
 exit /b
