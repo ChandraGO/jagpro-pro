@@ -10,7 +10,7 @@ import { LabelAssociation } from './LabelAssociation';
 import { MessageUpsertType, MessageUserReceiptUpdate, WAMessage, WAMessageKey, WAMessageUpdate } from './Message';
 import { ConnectionState } from './State';
 import { NewsletterSettingsUpdate, SubscriberAction, NewsletterViewRole } from './Newsletter';
-export type BaileysEventMap = {
+export type WileysEventMap = {
     /** connection state has been updated -- WS closed, opened, connecting etc. */
     'connection.update': Partial<ConnectionState>;
     /** credentials updated -- some metadata, keys or something */
@@ -190,10 +190,10 @@ export type BufferedEventData = {
         [jid: string]: Partial<GroupMetadata>;
     };
 };
-export type BaileysEvent = keyof BaileysEventMap;
-export interface BaileysEventEmitter {
-    on<T extends keyof BaileysEventMap>(event: T, listener: (arg: BaileysEventMap[T]) => void): void;
-    off<T extends keyof BaileysEventMap>(event: T, listener: (arg: BaileysEventMap[T]) => void): void;
-    removeAllListeners<T extends keyof BaileysEventMap>(event: T): void;
-    emit<T extends keyof BaileysEventMap>(event: T, arg: BaileysEventMap[T]): boolean;
+export type WileysEvent = keyof WileysEventMap;
+export interface WileysEventEmitter {
+    on<T extends keyof WileysEventMap>(event: T, listener: (arg: WileysEventMap[T]) => void): void;
+    off<T extends keyof WileysEventMap>(event: T, listener: (arg: WileysEventMap[T]) => void): void;
+    removeAllListeners<T extends keyof WileysEventMap>(event: T): void;
+    emit<T extends keyof WileysEventMap>(event: T, arg: WileysEventMap[T]): boolean;
 }

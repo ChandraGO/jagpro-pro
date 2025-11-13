@@ -1,7 +1,7 @@
 import { AxiosRequestConfig } from 'axios';
 import { ILogger } from './logger';
 import { proto } from '../../WAProto';
-import { BaileysEventEmitter, BaileysEventMap, BrowsersMap, WACallUpdateType, WAVersion } from '../Types';
+import { WileysEventEmitter, WileysEventMap, BrowsersMap, WACallUpdateType, WAVersion } from '../Types';
 import { BinaryNode } from '../WABinary';
 export declare const Browsers: BrowsersMap;
 export declare const getPlatformId: (browser: string) => any;
@@ -34,14 +34,14 @@ export declare const delayCancellable: (ms: number) => {
 export declare function promiseTimeout<T>(ms: number | undefined, promise: (resolve: (v: T) => void, reject: (error: any) => void) => void): Promise<T>;
 export declare const generateMessageIDV2: (userId?: string) => string;
 export declare const generateMessageID: () => string;
-export declare function bindWaitForEvent<T extends keyof BaileysEventMap>(ev: BaileysEventEmitter, event: T): (check: (u: BaileysEventMap[T]) => Promise<boolean | undefined>, timeoutMs?: number) => Promise<void>;
-export declare const bindWaitForConnectionUpdate: (ev: BaileysEventEmitter) => (check: (u: Partial<import("../Types").ConnectionState>) => Promise<boolean | undefined>, timeoutMs?: number) => Promise<void>;
-export declare const printQRIfNecessaryListener: (ev: BaileysEventEmitter, logger: ILogger) => void;
+export declare function bindWaitForEvent<T extends keyof WileysEventMap>(ev: WileysEventEmitter, event: T): (check: (u: WileysEventMap[T]) => Promise<boolean | undefined>, timeoutMs?: number) => Promise<void>;
+export declare const bindWaitForConnectionUpdate: (ev: WileysEventEmitter) => (check: (u: Partial<import("../Types").ConnectionState>) => Promise<boolean | undefined>, timeoutMs?: number) => Promise<void>;
+export declare const printQRIfNecessaryListener: (ev: WileysEventEmitter, logger: ILogger) => void;
 /**
- * utility that fetches latest baileys version from the master branch.
+ * utility that fetches latest wileys version from the master branch.
  * Use to ensure your WA connection is always on the latest version
  */
-export declare const fetchLatestBaileysVersion: (options?: AxiosRequestConfig<any>) => Promise<{
+export declare const fetchLatestWileysVersion: (options?: AxiosRequestConfig<any>) => Promise<{
     version: WAVersion;
     isLatest: boolean;
     error?: undefined;
@@ -71,7 +71,7 @@ export declare const generateMdTagPrefix: () => string;
  */
 export declare const getStatusFromReceiptType: (type: string | undefined) => proto.WebMessageInfo.Status;
 /**
- * Stream errors generally provide a reason, map that to a baileys DisconnectReason
+ * Stream errors generally provide a reason, map that to a wileys DisconnectReason
  * @param reason the string reason given, eg. "conflict"
  */
 export declare const getErrorCodeFromStreamError: (node: BinaryNode) => {

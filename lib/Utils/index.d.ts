@@ -10,7 +10,7 @@ export * from './history';
 export * from './chat-utils';
 export * from './lt-hash';
 export * from './auth-utils';
-export * from './baileys-event-stream';
+export * from './wileys-event-stream';
 export * from './use-multi-file-auth-state';
 export * from './link-preview';
 export * from './event-buffer';

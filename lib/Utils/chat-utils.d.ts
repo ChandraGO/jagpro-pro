@@ -1,6 +1,6 @@
 import { AxiosRequestConfig } from 'axios';
 import { proto } from '../../WAProto';
-import { BaileysEventEmitter, ChatModification, ChatMutation, Contact, InitialAppStateSyncOptions, LTHashState, WAPatchCreate, WAPatchName } from '../Types';
+import { WileysEventEmitter, ChatModification, ChatMutation, Contact, InitialAppStateSyncOptions, LTHashState, WAPatchCreate, WAPatchName } from '../Types';
 import { BinaryNode } from '../WABinary';
 import { ILogger } from './logger';
 type FetchAppStateSyncKey = (keyId: string) => Promise<proto.Message.IAppStateSyncKeyData | null | undefined>;
@@ -66,5 +66,5 @@ export declare const decodePatches: (name: WAPatchName, syncds: proto.ISyncdPatc
     mutationMap: ChatMutationMap;
 }>;
 export declare const chatModificationToAppPatch: (mod: ChatModification, jid: string) => WAPatchCreate;
-export declare const processSyncAction: (syncAction: ChatMutation, ev: BaileysEventEmitter, me: Contact, initialSyncOpts?: InitialAppStateSyncOptions, logger?: ILogger) => void;
+export declare const processSyncAction: (syncAction: ChatMutation, ev: WileysEventEmitter, me: Contact, initialSyncOpts?: InitialAppStateSyncOptions, logger?: ILogger) => void;
 export {};

@@ -2,7 +2,7 @@ import type KeyedDB from '@adiwajshing/keyed-db';
 import type { Comparable } from '@adiwajshing/keyed-db/lib/Types';
 import { proto } from '../../WAProto';
 import type makeMDSocket from '../Socket';
-import type { BaileysEventEmitter, Chat, ConnectionState, Contact, GroupMetadata, PresenceData, WAMessage, WAMessageCursor, WAMessageKey } from '../Types';
+import type { WileysEventEmitter, Chat, ConnectionState, Contact, GroupMetadata, PresenceData, WAMessage, WAMessageCursor, WAMessageKey } from '../Types';
 import { Label } from '../Types/Label';
 import { LabelAssociation } from '../Types/LabelAssociation';
 import { ILogger } from '../Utils/logger';
@@ -14,13 +14,13 @@ export declare const waChatKey: (pin: boolean) => {
 };
 export declare const waMessageID: (m: WAMessage) => string;
 export declare const waLabelAssociationKey: Comparable<LabelAssociation, string>;
-export type BaileysInMemoryStoreConfig = {
+export type WileysInMemoryStoreConfig = {
     chatKey?: Comparable<Chat, string>;
     labelAssociationKey?: Comparable<LabelAssociation, string>;
     logger?: ILogger;
     socket?: WASocket;
 };
-declare const _default: (config: BaileysInMemoryStoreConfig) => {
+declare const _default: (config: WileysInMemoryStoreConfig) => {
     chats: KeyedDB<Chat, string>;
     contacts: {
         [_: string]: Contact;
@@ -50,7 +50,7 @@ declare const _default: (config: BaileysInMemoryStoreConfig) => {
     };
     labels: ObjectRepository<Label>;
     labelAssociations: KeyedDB<LabelAssociation, string>;
-    bind: (ev: BaileysEventEmitter) => void;
+    bind: (ev: WileysEventEmitter) => void;
     /** loads messages from the store, if not found -- uses the legacy connection */
     loadMessages: (jid: string, count: number, cursor: WAMessageCursor) => Promise<WAMessage[]>;
     /**

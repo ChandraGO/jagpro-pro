@@ -1,4 +1,4 @@
-import { BaileysEventEmitter, BaileysEventMap } from '../Types';
+import { WileysEventEmitter, WileysEventMap } from '../Types';
 import { ILogger } from './logger';
 /**
  * A map that contains a list of all events that have been triggered
@@ -7,10 +7,10 @@ import { ILogger } from './logger';
  * this can make processing events extremely efficient -- since everything
  * can be done in a single transaction
  */
-type BaileysEventData = Partial<BaileysEventMap>;
-type BaileysBufferableEventEmitter = BaileysEventEmitter & {
+type WileysEventData = Partial<WileysEventMap>;
+type WileysBufferableEventEmitter = WileysEventEmitter & {
     /** Use to process events in a batch */
-    process(handler: (events: BaileysEventData) => void | Promise<void>): (() => void);
+    process(handler: (events: WileysEventData) => void | Promise<void>): (() => void);
     /**
      * starts buffering events, call flush() to release them
      * */
@@ -29,7 +29,7 @@ type BaileysBufferableEventEmitter = BaileysEventEmitter & {
 /**
  * The event buffer logically consolidates different events into a single event
  * making the data processing more efficient.
- * @param ev the baileys event emitter
+ * @param ev the wileys event emitter
  */
-export declare const makeEventBuffer: (logger: ILogger) => BaileysBufferableEventEmitter;
+export declare const makeEventBuffer: (logger: ILogger) => WileysBufferableEventEmitter;
 export {};

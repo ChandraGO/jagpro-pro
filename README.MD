@@ -488,31 +488,30 @@ Jika teks dan media digabung, hanya satu yang akan dikirim tergantung prioritas 
 
 ### Kirim teks ke status WhatsApp
 ```javascript
-await conn.upswgc("status@broadcast", {
-    text: "Halo dunia! ini teks status 📢"
-})
+await conn.upswgc(m.chat, { text: "Halo dari upswgc versi final!" })
 ```
 
 ### Kirim gambar ke status WhatsApp
 ```javascript
-await conn.upswgc("status@broadcast", {
-    image: { url: "https://example.com/image.jpg" },
-    caption: "Testing gambar status!"
-})
+await conn.upswgc(m.chat, {
+        image: { url: "https://m.media-amazon.com/images/S/pv-target-images/f75db71efd62ea2eff81bd7cc01c44a9344b4ac18615ab71a80f58459ddf8791.jpg" },
+        caption : "apasi"
+      });
+
 ```
 ### Kirim video ke status WhatsApp
 ```javascript
-await conn.upswgc("status@broadcast", {
-    video: { url: "https://example.com/video.mp4" },
-    caption: "Testing video status!"
-})
+await conn.upswgc(m.chat, {
+        video: { url: "https://m.media-amazon.com/images/S/pv-target-images/f75db71efd62ea2eff81bd7cc01c44a9344b4ac18615ab71a80f58459ddf8791.jpg" },
+        caption : "apasi"
+      });
 ```
 ### Kirim audio (voice note) ke status WhatsApp
 ```javascript
-await conn.upswgc("status@broadcast", {
-    audio: { url: "https://example.com/audio.mp3" },
-    mimetype: "audio/mp4"
-})
+await conn.upswgc(m.chat, {
+        audio: { url: "https://cdn.yupra.my.id/yp/xkv99g06.opus" },
+        caption : "apasi"
+      });
 ```
 
 `[!TIP]
