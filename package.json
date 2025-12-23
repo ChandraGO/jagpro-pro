@@ -1,6 +1,6 @@
 {
   "name": "jagproject",
-  "version": "5.8.5",
+  "version": "7.8.9",
   "description": "WhatsApp Web API Library",
   "keywords": [
     "jagoan",
@@ -14,7 +14,7 @@
   "homepage": "https://www.npmjs.com/package/jagoanproject",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChandraGO/jagoans.git"
+    "url": "git+https://github.com/ChandraGO/jagoans.git"
   },
   "license": "MIT",
   "author": "jagoan",
