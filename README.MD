@@ -1,17 +1,25 @@
+<h1 align="center">Baileys Modification</h1>
 
-# <div align='center'>Baileys Modification</div>
+<p align="center">
+  <sub>Last update: <strong>15 Februari 2026</strong></sub>
+</p>
+
+<div align="center">
+  <a href="https://www.npmjs.com/package/wileys">
+    <img src="https://img.shields.io/badge/From-@wileys-blue?logo=npm&logoColor=white" />
+  </a>
+</div>
+
+
 
 <div align="center">
 
   <img src="https://cdn.antaranews.com/cache/800x533/2023/05/17/Screenshot_20230517_132501_Gallery.jpg" />
 
-  <a href="https://www.npmjs.com/package/jagoan-project">
-    <img src="https://img.shields.io/npm/v/jagoan-project?color=red&label=Version&logo=npm" alt="npm version" />
-  </a>
+  <a href="https://youtube.com/jagoanproject">
+  <img src="https://img.shields.io/badge/YouTube-JagoanProject-red?logo=youtube&logoColor=white" alt="YouTube JagoanProject" />
+</a>
 
-  <a href="https://www.npmjs.com/package/jagoan-project">
-    <img src="https://img.shields.io/npm/dt/jagoan-project?color=red&label=Downloads&logo=npm" alt="npm downloads" />
-  </a>
 
   <a href="https://whatsapp.com/channel/0029VanhMDo42DcjiRGJOc2m ">
     <img src="https://img.shields.io/badge/WhatsApp-Channel-25D366?logo=whatsapp&logoColor=white" alt="WhatsApp Channel" />
@@ -22,12 +30,17 @@
 
 ## 📖 Tentang Jagoan Project
 
-**Jagoan Project** adalah modifikasi dokumentasi dari *baileys*, sebuah library modern berbasis TypeScript untuk integrasi WhatsApp Web API.  
-Library ini sudah mendukung sistem *multi-device*, enkripsi end-to-end, dan kompatibilitas tinggi untuk semua tipe pesan di WhatsApp.  
-Selain itu, Jagoan Project menghadirkan dokumentasi bergaya modern agar mudah dibaca dan dipahami oleh para pengembang.  
+**Jagoan Project** adalah modifikasi dokumentasi dari *baileys* Mod https://www.npmjs.com/package/wileys, Di Karenakan Dev aslinya sudah tidak melanjutkan update maka saya melanjutkan update pada project tersebut disini. namun saya tetap menghargai dev dengan mencantumkan nama Creator utama. terimaksih.
 
-📦 **Donasi (Qris)**  
-[Klik di sini untuk melihat QRIS](https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/qris.jpg)
+Library ini sudah mendukung sistem *multi-device*, enkripsi end-to-end, dan kompatibilitas tinggi untuk semua tipe pesan di WhatsApp.  
+Selain itu, Jagoan Project menghadirkan dokumentasi bergaya modern agar mudah dibaca dan dipahami oleh para pengembang, dan inshaallah akan selalu update.  
+
+📦 **Donasi (Klik Qris)**  
+[Jagoan Project](https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/qris.jpg)
+
+[Wileys - Original Dev.](https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/qris.jpg)
+
+
 
 
 ---

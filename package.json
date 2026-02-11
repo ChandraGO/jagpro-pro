@@ -1,7 +1,7 @@
 {
   "name": "jagproject",
-  "version": "29.29.1",
-   "update": "29 Januari 2026",
+  "version": "26.02.15",
+   "update": "15 Februari 2026",
   "description": "WhatsApp Web API Library",
   "keywords": [
     "jagoan",
@@ -27,7 +27,7 @@
     "engine-requirements.js"
   ],
   "scripts": {
-    "build:all": "tsc && typedoc",
+      "build:all": "tsc && typedoc",
     "build:docs": "typedoc",
     "build:tsc": "tsc",
     "changelog:last": "conventional-changelog -p angular -r 2",
@@ -37,7 +37,7 @@
     "gen:protobuf": "sh WAProto/GenerateStatics.sh",
     "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
     "lint:fix": "eslint src --fix --ext .js,.ts,.jsx,.tsx",
-    "prepack": "echo 'jagoan WhatsApp Library'",
+    "prepack": "node -e \"const fs=require('fs');const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));const t=pkg.update;if(!t)process.exit(1);const f=fs.existsSync('README.MD')?'README.MD':'README.md';let r=fs.readFileSync(f,'utf8');r=r.replace(/<sub>\\s*Last update:\\s*<strong>[\\s\\S]*?<\\/strong>\\s*<\\/sub>/i,`<sub>Last update: <strong>${t}</strong></sub>`);fs.writeFileSync(f,r);console.log('prepack synced README:',t);\"",
     "prepare": "echo 'jagoan WhatsApp Library'",
     "preinstall": "node ./engine-requirements.js",
     "postinstall": "node ./lib/Defaults/update-wa-version.js",
